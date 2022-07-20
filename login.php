@@ -10,12 +10,16 @@ if (isset($_POST["submit"])) {
             $_SESSION["login"] = true;
             $_SESSION["id"] = $row["id"];
             header("Location: index.php");
+        } else {
+            echo "Password incorrect";
         }
     } else {
         echo "Username not registered";
     }
 }
+
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
